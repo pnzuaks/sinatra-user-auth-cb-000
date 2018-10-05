@@ -39,9 +39,6 @@ class ApplicationController < Sinatra::Base
 
   get '/users/home' do
     @user = User.find(session[:id])
-    # puts "--------------------->>"
-    # puts @user.name
-    # puts User.all.collect(&:id)
     erb :'/users/home'
   end
 
